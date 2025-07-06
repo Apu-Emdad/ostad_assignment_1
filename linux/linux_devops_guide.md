@@ -57,13 +57,13 @@ Linux powers **96% of the world's servers** and is the backbone of modern DevOps
 
 ```mermaid
 graph TD
-    A[AI/ML Layer<br/>Predictive Analytics | AIOps | Anomaly Detection] --> B[Observability<br/>Prometheus | Grafana | ELK Stack | Datadog | New Relic]
-    B --> C[Container Orchestration<br/>Kubernetes | Docker Swarm | OpenShift]
-    C --> D[CI/CD Pipelines<br/>Jenkins | GitLab CI | GitHub Actions | Azure DevOps]
-    D --> E[Infrastructure as Code<br/>Terraform | Ansible | Puppet | Chef | CloudFormation]
-    E --> F[Operating System Layer<br/>LINUX Ubuntu/RHEL/CentOS/Alpine]
-    F --> G[Cloud Infrastructure<br/>AWS | Azure | GCP | Multi-Cloud Platforms]
-    
+    A[AI/ML Layer<br/>Predictive Analytics<br/>AIOps<br/>Anomaly Detection] --> B[Observability<br/>Prometheus<br/>Grafana<br/>ELK Stack<br/>Datadog<br/>New Relic]
+    B --> C[Container Orchestration<br/>Kubernetes<br/>Docker Swarm<br/>OpenShift]
+    C --> D[CI/CD Pipelines<br/>Jenkins<br/>GitLab CI<br/>GitHub Actions<br/>Azure DevOps]
+    D --> E[Infrastructure as Code<br/>Terraform<br/>Ansible<br/>Puppet<br/>Chef<br/>CloudFormation]
+    E --> F[Operating System Layer<br/>LINUX Ubuntu<br/>RHEL<br/>CentOS<br/>Alpine]
+    F --> G[Cloud Infrastructure<br/>AWS<br/>Azure<br/>GCP<br/>Multi-Cloud Platforms]
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -72,6 +72,7 @@ graph TD
     style F fill:#f1f8e9
     style G fill:#e3f2fd
 ```
+
 
 ### DevOps Workflow Architecture 
 
