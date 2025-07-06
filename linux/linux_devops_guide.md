@@ -323,20 +323,21 @@ cat /proc/1234/status
 
 ```mermaid
 graph TD
-    A[Data Collection<br/>Telegraf | Node Exporter | Beats | Custom Agents] --> B[Data Storage<br/>Prometheus | InfluxDB | Elasticsearch | TimescaleDB]
+    A[Data Collection\nTelegraf, Node Exporter, Beats, Custom Agents] --> B[Data Storage\nPrometheus, InfluxDB, Elasticsearch, TimescaleDB]
     
-    A --> C[Data Processing<br/>Logstash | Fluentd | Vector | Stream Processing]
+    A --> C[Data Processing\nLogstash, Fluentd, Vector, Stream Processing]
     
-    B --> D[Visualization<br/>Grafana | Kibana | Custom Dashboards | Mobile Apps]
+    B --> D[Visualization\nGrafana, Kibana, Custom Dashboards, Mobile Apps]
     C --> D
     
-    D --> E[Alerting & Notifications<br/>Slack | PagerDuty | Email | SMS | Webhooks]
+    D --> E[Alerting & Notifications\nSlack, PagerDuty, Email, SMS, Webhooks]
     
     style A fill:#e8f5e8
     style B fill:#e3f2fd
     style C fill:#fff3e0
     style D fill:#f3e5f5
     style E fill:#ffebee
+
 ```
 
 #### Advanced Monitoring Examples
