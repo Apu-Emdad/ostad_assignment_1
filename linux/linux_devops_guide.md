@@ -206,7 +206,7 @@ graph TD
 #### File Content Operations
 
 | Command | Purpose                       | Example                            | DevOps Use Case                |
-| ------- | ----------------------------- | ---------------------------------- | ------------------------------ | ------------------------- |
+| ------- | ----------------------------- | ---------------------------------- | ------------------------------ |
 | `cat`   | Display file content          | `cat /etc/hostname`                | View system configuration      |
 | `less`  | View file content (paginated) | `less /var/log/syslog`             | Browse through large log files |
 | `head`  | Show first lines              | `head -20 /var/log/access.log`     | Check recent log entries       |
@@ -215,8 +215,9 @@ graph TD
 | `awk`   | Text processing               | `awk '{print $1, $4}' access.log`  | Extract specific log fields    |
 | `sed`   | Stream editor                 | `sed 's/DEBUG/INFO/g' app.log`     | Replace log levels             |
 | `sort`  | Sort lines                    | `sort -k2 server_list.txt`         | Sort server lists              |
-| `uniq`  | Remove duplicates             | `sort access.log                   | uniq -c`                       | Count unique IP addresses |
+| `uniq`  | Remove duplicates             | `sort access.log \| uniq -c`       | Count unique IP addresses      |
 | `wc`    | Count lines/words             | `wc -l /var/log/error.log`         | Count error log entries        |
+
 
 ### Linux Permissions System
 
