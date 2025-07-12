@@ -275,8 +275,8 @@ chmod 700 /tmp/deploy_script.sh
 #### Basic Process Operations
 
 | Command   | Purpose                       | Example                     | DevOps Application               |
-| --------- | ----------------------------- | --------------------------- | -------------------------------- | --------------------- |
-| `ps`      | List processes                | `ps aux                     | grep nginx`                      | Find running services |
+| --------- | ----------------------------- | --------------------------- | -------------------------------- |
+| `ps`      | List processes                | `ps aux \| grep nginx`      | Find running services            |
 | `top`     | Real-time process viewer      | `top -p $(pgrep java)`      | Monitor application performance  |
 | `htop`    | Enhanced process viewer       | `htop`                      | Interactive process monitoring   |
 | `pgrep`   | Find process by name          | `pgrep -f "java.*spring"`   | Find Java applications           |
@@ -287,6 +287,7 @@ chmod 700 /tmp/deploy_script.sh
 | `jobs`    | List active jobs              | `jobs -l`                   | Monitor background tasks         |
 | `fg`      | Bring job to foreground       | `fg %1`                     | Bring background job forward     |
 | `bg`      | Send job to background        | `bg %2`                     | Continue job in background       |
+
 
 #### Process Priority and Control
 
@@ -413,7 +414,7 @@ sysctl -p
 #### APT (Ubuntu/Debian)
 
 | Command          | Purpose                  | Example                          |
-| ---------------- | ------------------------ | -------------------------------- | ------------ |
+| ---------------- | ------------------------ | -------------------------------- |
 | `apt update`     | Update package lists     | `apt update`                     |
 | `apt upgrade`    | Upgrade packages         | `apt upgrade -y`                 |
 | `apt install`    | Install packages         | `apt install -y nginx docker.io` |
@@ -421,9 +422,10 @@ sysctl -p
 | `apt purge`      | Remove with configs      | `apt purge mysql-server`         |
 | `apt search`     | Search packages          | `apt search "web server"`        |
 | `apt show`       | Show package info        | `apt show nginx`                 |
-| `apt list`       | List packages            | `apt list --installed            | grep docker` |
+| `apt list`       | List packages            | `apt list --installed \| grep docker` |
 | `apt autoremove` | Remove unused packages   | `apt autoremove`                 |
 | `apt-cache`      | Package cache operations | `apt-cache depends nginx`        |
+
 
 #### YUM/DNF (RHEL/CentOS/Fedora)
 
@@ -1006,15 +1008,16 @@ deploy ALL=(ALL) NOPASSWD: /opt/scripts/deploy.sh, /bin/systemctl restart myapp
 
 #### System Log Locations
 
-| Log File            | Purpose                 | Example Commands                           |
-| ------------------- | ----------------------- | ------------------------------------------ | --------- |
-| `/var/log/syslog`   | System messages         | `tail -f /var/log/syslog`                  |
-| `/var/log/auth.log` | Authentication logs     | `grep "Failed password" /var/log/auth.log` |
-| `/var/log/kern.log` | Kernel messages         | `dmesg                                     | tail -20` |
-| `/var/log/messages` | General system messages | `grep -i error /var/log/messages`          |
-| `/var/log/nginx/`   | Nginx logs              | `tail -f /var/log/nginx/error.log`         |
-| `/var/log/apache2/` | Apache logs             | `tail -f /var/log/apache2/access.log`      |
-| `/var/log/mysql/`   | MySQL logs              | `tail -f /var/log/mysql/error.log`         |
+| Log File            | Purpose                 | Example Commands                             |
+| ------------------- | ----------------------- | -------------------------------------------- |
+| `/var/log/syslog`   | System messages         | `tail -f /var/log/syslog`                    |
+| `/var/log/auth.log` | Authentication logs     | `grep "Failed password" /var/log/auth.log`   |
+| `/var/log/kern.log` | Kernel messages         | `dmesg \| tail -20`                          |
+| `/var/log/messages` | General system messages | `grep -i error /var/log/messages`            |
+| `/var/log/nginx/`   | Nginx logs              | `tail -f /var/log/nginx/error.log`           |
+| `/var/log/apache2/` | Apache logs             | `tail -f /var/log/apache2/access.log`        |
+| `/var/log/mysql/`   | MySQL logs              | `tail -f /var/log/mysql/error.log`           |
+
 
 #### Log Analysis Commands
 
